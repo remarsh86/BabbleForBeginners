@@ -24,15 +24,15 @@ public class CreateBabbleServlet extends HttpServlet {
             IOException {
         //Get user input from website url: localhost:9072/createbabble
         String text = request.getParameter("text");
-        String creator = request.getParameter("creator");
+        //String creator = request.getParameter("creator");
 
-        if (null != text && null != creator && !text.isEmpty() && !creator.isEmpty()) {
-            //Add new babble to database babble
-            Babble babble = new Babble(text, creator);
-            new BabbleStore().addBabble(babble);
+//        if (null != text && null != creator && !text.isEmpty() && !creator.isEmpty()) {
+//            //Add new babble to database babble
+//            Babble babble = new Babble(text, creator);
+//            new BabbleStore().addBabble(babble);
 
             doGet(request, response);
-        }
+       // }
     }
 
 

@@ -1,7 +1,6 @@
 package de.unidue.inf.is.domain;
 
 
-import sun.tools.tree.LengthExpression;
 
 public final class Babble {
     private String text;

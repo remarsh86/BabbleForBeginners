@@ -2,9 +2,11 @@
 <head><title>Create Babble</title>
 
 <body>
-  <form name="user" action="" method="post">
-    : <input type="text" name="firstname" /> <br/>
-    Lastname: <input type="text" name="lastname" /> <br/>
+  <form name="babble" action="" method="post">
+    <textarea rows="4" cols="50">
+    Please enter a comment.
+    </textarea> <br/>
+
     <input type="submit" value="Search" />
   </form>
 
