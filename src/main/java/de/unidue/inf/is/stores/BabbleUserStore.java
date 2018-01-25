@@ -25,7 +25,7 @@ public class BabbleUserStore implements Closeable{
         }
     }
 
-    public void addUser(User userToAdd) throws StoreException {
+    public void addBabbleUser(User userToAdd) throws StoreException {
         try {
             PreparedStatement preparedStatement = connection
                     .prepareStatement("insert into babbleuser (username, name, status, profilbild) values (?, ?, ?, ?)");
