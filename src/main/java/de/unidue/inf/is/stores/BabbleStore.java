@@ -1,7 +1,7 @@
 package de.unidue.inf.is.stores;
 
-import de.unidue.inf.is.domain.BabbleUser;
-import de.unidue.inf.is.domain.User;
+
+import de.unidue.inf.is.domain.Babble;
 import de.unidue.inf.is.utils.DBUtil;
 
 import java.io.Closeable;
@@ -10,12 +10,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class BabbleUserStore implements Closeable{
+public class BabbleStore implements Closeable {
+
     private Connection connection;
     private boolean complete;
 
-
-    public BabbleUserStore() throws StoreException {
+    public BabbleStore() throws StoreException {
         try {
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
@@ -26,14 +26,12 @@ public class BabbleUserStore implements Closeable{
         }
     }
 
-    public void addBabbleUser(BabbleUser userToAdd) throws StoreException {
+    public void addBabble(Babble babbleToAdd) throws StoreException {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into babbleuser (username, name, status, profilbild) values (?, ?, ?, ?)");
-            preparedStatement.setString(1, userToAdd.getUsername());
-            preparedStatement.setString(2, userToAdd.getName());
-            preparedStatement.setString(3, userToAdd.getStatus());
-            preparedStatement.setString(4, userToAdd.getFoto());
+                    .prepareStatement("insert into babbleuser (text, creator) values (?, ?)");
+            preparedStatement.setString(1, babbleToAdd.getText());
+            preparedStatement.setString(2, babbleToAdd.getCreator());
             preparedStatement.executeUpdate();
         }
         catch (SQLException e) {
@@ -52,23 +50,19 @@ public class BabbleUserStore implements Closeable{
             try {
                 if (complete) {
                     connection.commit();
-                }
-                else {
+                } else {
                     connection.rollback();
                 }
-            }
-            catch (SQLException e) {
+            } catch (SQLException e) {
                 throw new StoreException(e);
-            }
-            finally {
+            } finally {
                 try {
                     connection.close();
-                }
-                catch (SQLException e) {
+                } catch (SQLException e) {
                     throw new StoreException(e);
                 }
             }
         }
-    }
 
+    }
 }

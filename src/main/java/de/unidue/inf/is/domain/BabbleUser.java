@@ -1,16 +1,16 @@
 package de.unidue.inf.is.domain;
 
-public class BabbleUser {
+public final class BabbleUser {
     private String username;
     private String name;
     private String status;
     private String foto;
 
     public BabbleUser(String username, String name, String status, String foto){
-        this.username = username;
-        this.name = name;
-        this.status = status;
-        this.foto = foto;
+        this.setUsername(username);
+        this.setName(name);
+        this.setStatus(status);
+        this.setFoto(foto);
     }
 
     public String getUsername() {
