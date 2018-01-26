@@ -6,33 +6,63 @@ import de.unidue.inf.is.utils.DBUtil;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class BabbleStore implements Closeable {
 
     private Connection connection;
     private boolean complete;
 
+
     public BabbleStore() throws StoreException {
         try {
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
             connection.setAutoCommit(false);
+
         }
         catch (SQLException e) {
             throw new StoreException(e);
         }
     }
 
-    public void addBabble(Babble babbleToAdd) throws StoreException {
+    public void test(){
+        Statement stmt= null;
         try {
+            stmt = connection.createStatement();
+        } catch (SQLException e) {
+            System.out.println("Bad connection.");
+        }
+        ResultSet rs= null;
+        try {
+            rs = stmt.executeQuery("select * from Babble");
+        } catch (SQLException e) {
+            System.out.println("Problem with execute");
+        }
+        try {
+            if(rs == null) System.out.println("No result set.");
+            else{
+                while(rs.next())
+                    System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4)+"  "+rs.getString(5));
+            }
+        } catch (SQLException e) {
+            System.out.println("Problem reading data");
+        }
+
+    }
+
+    public void addBabble(Babble babble) throws StoreException {
+
+
+        System.out.println("try prepared statement");
+        try {
+
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into babbleuser (text, creator) values (?, ?)");
-            preparedStatement.setString(1, babbleToAdd.getText());
-            preparedStatement.setString(2, babbleToAdd.getCreator());
+                    .prepareStatement("INSERT INTO babble (text, creator) VALUES (?, ?)");
+            preparedStatement.setString(1, babble.getText());
+            preparedStatement.setString(2, babble.getCreator());
             preparedStatement.executeUpdate();
+
         }
         catch (SQLException e) {
             throw new StoreException(e);

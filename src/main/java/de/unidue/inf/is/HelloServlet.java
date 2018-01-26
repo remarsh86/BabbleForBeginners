@@ -45,7 +45,7 @@ public final class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
                     IOException {
 
-        String firstname = request.getParameter("firstname");
+        String firstname = request.getParameter("firstname"); //ftl variablename
         String lastname = request.getParameter("lastname");
 
         if (null != firstname && null != lastname && !firstname.isEmpty() && !lastname.isEmpty()) {
