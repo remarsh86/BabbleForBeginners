@@ -39,10 +39,10 @@ body{
 </style>
 
 <body>
-	<form name="user" action="hello" method="post">
-        Firstname: <input type="text" name="firstname" /> <br/>
-        Lastname: <input type="text" name="lastname" /> <br/>
-        <input type="submit" value="Save" />
+	<form name="user" action="profile" method="post">
+        <input type="submit" name="search" />
+        <input type="submit" name="block" />
+        <input type="submit" name="follow" />
       </form>
 
 

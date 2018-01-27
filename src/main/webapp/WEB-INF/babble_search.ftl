@@ -39,12 +39,12 @@
   </style>
 
 <body>
-  <form name="babble" action="createbabble" method="post">
+  <form name="babble" action="searchbabbles" method="post">
     <textarea name="comment" rows="50" cols="70">
     Please enter a comment.
     </textarea> <br/>
 
-    <input type="submit" value="Submit" />
+    <input type="submit" value="Search for babbles" />
   </form>
 
 
