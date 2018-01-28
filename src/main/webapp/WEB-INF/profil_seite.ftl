@@ -10,6 +10,10 @@ body{
    text-align:center;
    background: #efe4bf none repeat scroll 0 0;
 }
+form {
+    display: inline;
+}
+
 
 #wrapper{
    width:960px;
@@ -29,6 +33,7 @@ body{
 
 }
 
+
 #site{
     background-color: #fff;
     padding: 20px 0px 0px 0px;
@@ -39,11 +44,23 @@ body{
 </style>
 
 <body>
-	<form name="user" action="profile" method="post">
-        <input type="submit" name="search" />
-        <input type="submit" name="block" />
-        <input type="submit" name="follow" />
+	<form  action="searchbabbles" >
+       <input type="submit"  value = "Search" />
+
       </form>
+    <form name = "clicks" method="post"  >
+          <input type="submit" name="block" value = "Block/Unblock" />
+            <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
+            A whole bunch of info about the BabbleUser <br/>
+    </form>
+    <form  action="createbabble" >
+        <input type="submit"  value = "New Babble" /><br/>
+    </form>
+    <form name = "timeline" method="post"  >
+        <#--<input type="submit" name="test" value = "Test" />-->
+
+        The timeline follow here.... <br/>
+    </form>
 
 
 </body>

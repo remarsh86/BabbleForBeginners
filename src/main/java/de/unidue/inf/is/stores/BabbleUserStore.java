@@ -33,7 +33,7 @@ public class BabbleUserStore implements Closeable{
             preparedStatement.setString(1, userToAdd.getUsername());
             preparedStatement.setString(2, userToAdd.getName());
             preparedStatement.setString(3, userToAdd.getStatus());
-            preparedStatement.setString(4, userToAdd.getFoto());
+            //preparedStatement.setString(4, userToAdd.getFoto());
             preparedStatement.executeUpdate();
         }
         catch (SQLException e) {

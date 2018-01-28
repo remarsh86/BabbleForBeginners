@@ -23,14 +23,11 @@ public class ProfileServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
         //how do i know which button was pressed???
-        String searchButton = request.getParameter("search"); //ftl variablename
         String blockButton = request.getParameter("block");
         String followButton = request.getParameter("follow");
 
-        //if searchButton clicked
-        if (null != searchButton  && !searchButton.isEmpty()) {
-            System.out.println("You clicked the search Button");
-        }
+
+
         //if blockButton clicked
         if (null != blockButton  && !blockButton.isEmpty()) {
             System.out.println("You clicked the block Button");
@@ -39,6 +36,8 @@ public class ProfileServlet extends HttpServlet {
         if (null != followButton  && !followButton.isEmpty()) {
             System.out.println("You clicked the follow Button");
         }
+
+
 
 
 
