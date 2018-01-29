@@ -50,5 +50,11 @@ body{
 		</p>
 		</div>
 	</div>
+
+    <form action="profile">
+
+        <input type="hidden" name="varname" value="username" />
+        <input type="submit" value="Send data">
+    </form>
 </body>
 </html>

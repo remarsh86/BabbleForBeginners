@@ -2,6 +2,7 @@ package de.unidue.inf.is.stores;
 
 
 import de.unidue.inf.is.domain.Babble;
+import de.unidue.inf.is.domain.BabbleUser;
 import de.unidue.inf.is.utils.DBUtil;
 
 import java.io.Closeable;
@@ -12,6 +13,7 @@ public class BabbleStore implements Closeable {
 
     private Connection connection;
     private boolean complete;
+    private String username;
 
 
     public BabbleStore() throws StoreException {
@@ -19,12 +21,13 @@ public class BabbleStore implements Closeable {
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
             connection.setAutoCommit(false);
-
         }
         catch (SQLException e) {
             throw new StoreException(e);
         }
     }
+
+
 
     public void test(){
         Statement stmt= null;
@@ -35,7 +38,7 @@ public class BabbleStore implements Closeable {
         }
         ResultSet rs= null;
         try {
-            rs = stmt.executeQuery("select * from Babble");
+            rs = stmt.executeQuery("select * from dbp72.babble");
         } catch (SQLException e) {
             System.out.println("Problem with execute");
         }
@@ -43,7 +46,7 @@ public class BabbleStore implements Closeable {
             if(rs == null) System.out.println("No result set.");
             else{
                 while(rs.next())
-                    System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4)+"  "+rs.getString(5));
+                    System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4));
             }
         } catch (SQLException e) {
             System.out.println("Problem reading data");
@@ -51,21 +54,24 @@ public class BabbleStore implements Closeable {
 
     }
 
-    public void addBabble(Babble babble) throws StoreException {
+    public boolean addBabble(Babble babble) throws StoreException {
 
 
         System.out.println("try prepared statement");
         try {
 
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("INSERT INTO babble (text, creator) VALUES (?, ?)");
+                    .prepareStatement("INSERT INTO dbp72.babble (text, creator) VALUES (?, ?)");
             preparedStatement.setString(1, babble.getText());
             preparedStatement.setString(2, babble.getCreator());
             preparedStatement.executeUpdate();
 
+            return true;
         }
         catch (SQLException e) {
+
             throw new StoreException(e);
+
         }
     }
 

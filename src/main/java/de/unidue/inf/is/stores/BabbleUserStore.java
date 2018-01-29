@@ -6,9 +6,7 @@ import de.unidue.inf.is.utils.DBUtil;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class BabbleUserStore implements Closeable{
     private Connection connection;
@@ -20,13 +18,66 @@ public class BabbleUserStore implements Closeable{
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
             connection.setAutoCommit(false);
+            System.out.println("Good connection to db (BabbleUserStore)");
         }
         catch (SQLException e) {
             throw new StoreException(e);
         }
     }
 
-    public void addBabbleUser(BabbleUser userToAdd) throws StoreException {
+    public void test(){
+        Statement stmt= null;
+        try {
+            stmt = connection.createStatement();
+        } catch (SQLException e) {
+            System.out.println("Bad connection.");
+        }
+        ResultSet rs= null;
+        try {
+            rs = stmt.executeQuery("select * from dbp72.babbleuser");
+        } catch (SQLException e) {
+            System.out.println("Problem with execute");
+        }
+        try {
+            if(rs == null) System.out.println("No result set.");
+            else{
+                while(rs.next())
+                    System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4));
+            }
+        } catch (SQLException e) {
+            System.out.println("Problem reading data");
+        }
+
+    }
+
+    //todo
+    public BabbleUser getBabbleUser(){
+        System.out.println("Retrieving BabbleUser in BabbleUserStore");
+        PreparedStatement pstmt = null;
+        BabbleUser user= null;
+
+        try {
+            //todo: where babblueuser username = session attribute
+            pstmt = connection.prepareStatement("SELECT * FROM dbp72.babbleuser WHERE username = 'dbuser'");
+            ResultSet rs = pstmt.executeQuery();
+            if(rs == null) System.out.println("No result set.");
+            else {
+                while (rs.next()) {
+                    user = new BabbleUser();
+                    user.setUsername(rs.getString(1));
+                    user.setName(rs.getString(2));
+                    user.setStatus(rs.getString(3));
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("username is " + user.getUsername());
+        return user;
+    }
+
+    public boolean addBabbleUser(BabbleUser userToAdd) throws StoreException {
         try {
             PreparedStatement preparedStatement = connection
                     .prepareStatement("insert into babbleuser (username, name, status, profilbild) values (?, ?, ?, ?)");
@@ -35,6 +86,7 @@ public class BabbleUserStore implements Closeable{
             preparedStatement.setString(3, userToAdd.getStatus());
             //preparedStatement.setString(4, userToAdd.getFoto());
             preparedStatement.executeUpdate();
+            return true;
         }
         catch (SQLException e) {
             throw new StoreException(e);

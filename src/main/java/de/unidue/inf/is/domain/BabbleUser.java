@@ -4,13 +4,23 @@ public final class BabbleUser {
     private String username;
     private String name;
     private String status;
-    private String foto;
+    private String foto = "/Users/rebeccamarsh/Desktop/CharlieinGrass.jpg";
+
+
+    public BabbleUser(){ }
 
     public BabbleUser(String username, String name, String status, String foto){
         this.setUsername(username);
         this.setName(name);
         this.setStatus(status);
         this.setFoto(foto);
+    }
+
+
+    public BabbleUser(String username, String name, String status){
+        this.setUsername(username);
+        this.setName(name);
+        this.setStatus(status);
     }
 
     public String getUsername() {
