@@ -36,7 +36,7 @@ public class CreateBabbleServlet extends HttpServlet {
 
         BabbleStore b = new BabbleStore();
 
-        HttpSession session=request.getSession(false);
+        HttpSession session=request.getSession();
 
         //Get user input from website url: localhost:9072/createbabble
         String text = request.getParameter("comment");

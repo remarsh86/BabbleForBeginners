@@ -41,7 +41,7 @@ body{
 <body>
 	<div id="wrapper">
 		<div id="header">
-		<h1> Babble Website </h1>
+		<h1> Babble Website Login </h1>
 		</div>
 	   
 		<div id="site">

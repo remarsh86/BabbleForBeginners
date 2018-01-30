@@ -2,7 +2,6 @@ package de.unidue.inf.is.stores;
 
 
 import de.unidue.inf.is.domain.Babble;
-import de.unidue.inf.is.domain.BabbleUser;
 import de.unidue.inf.is.utils.DBUtil;
 
 import java.io.Closeable;
@@ -13,7 +12,7 @@ public class BabbleStore implements Closeable {
 
     private Connection connection;
     private boolean complete;
-    private String username;
+   // private String username;
 
 
     public BabbleStore() throws StoreException {

@@ -4,6 +4,7 @@ import de.unidue.inf.is.domain.Babble;
 import de.unidue.inf.is.domain.BabbleUser;
 import de.unidue.inf.is.domain.User;
 import de.unidue.inf.is.stores.BabbleUserStore;
+import de.unidue.inf.is.stores.TimelineStore;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,25 +27,18 @@ public class ProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-//        //For session
-//        BabbleUserStore store = new BabbleUserStore();
-//        user = store.getBabbleUser();
-//        //Sets the current session id as dbuser with a BabbleUser object as value
-  //      HttpSession session = request.getSession();
-//        session.setAttribute("dbuser", user);
-//        //Set profile personal information to match session user
-//        request.setAttribute("user", user);
-
-
+        //For session
         HttpSession session = request.getSession(false);
-        if(session.getAttribute("babbler") != null) {
-            bs = (BabbleUser) session.getAttribute("babbler");
-        }
+        bs = (BabbleUser) session.getAttribute("babbler");
+        System.out.println(" session username is (on profile page):" + bs.getUsername() );
+
 
         //For Personal Information
         request.setAttribute("user", bs);
 
-        //For timeline: Pass list of babbles to profile page
+//        //For timeline: Pass list of babbles to profile page
+//        TimelineStore store = new TimelineStore(bs.getUsername());
+//        timelineList = store.createTimeline(); //maybe return
         //request.setAttribute("datatable", timelineList);
 
         request.getRequestDispatcher("/profil_seite.ftl").forward(request, response);

@@ -61,6 +61,8 @@ public final class BabbleServlet extends HttpServlet {
             //For session
             BabbleUserStore store = new BabbleUserStore(username);
             BabbleUser user = store.getBabbleUser();
+            System.out.println("Did getBabbleUser method work: " );
+            System.out.println(user.getUsername());
 
             //Sets the current session id as dbuser with a BabbleUser object as value
             HttpSession session = request.getSession();

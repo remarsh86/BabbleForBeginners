@@ -1,21 +1,22 @@
 package de.unidue.inf.is.domain;
 
 
-import org.apache.commons.net.ntp.TimeStamp;
+import java.sql.Timestamp;
 
 public final class Babble {
     private int id;
     private String text;
-    private TimeStamp created;
+    private Timestamp created;
     private String creator;
 
+    public Babble(){ }
 
     public Babble(String text, String creator){
        this.setText(text);
        this.setCreator(creator);
     }
 
-    public Babble(int id, String text, TimeStamp created, String creator){
+    public Babble(int id, String text, Timestamp created, String creator){
         this.setId(id);
         this.setText(text);
         this.setCreated(created);
@@ -54,11 +55,11 @@ public final class Babble {
         this.id = id;
     }
 
-    public TimeStamp getCreated() {
+    public Timestamp getCreated() {
         return created;
     }
 
-    public void setCreated(TimeStamp created) {
+    public void setCreated(Timestamp created) {
         this.created = created;
     }
 }
