@@ -15,19 +15,23 @@ import java.io.IOException;
 public class ProfileServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+    private BabbleUser user = null;
 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        //For session
         BabbleUserStore store = new BabbleUserStore();
-        BabbleUser user = store.getBabbleUser();
+        user = store.getBabbleUser();
 
-
+        //Sets the current session id as dbuser with a BabbleUser object as value
         HttpSession session = request.getSession();
-        //alternative: sesssion.setAttribute("dbuser", user);
-        session.setAttribute("dbuser", user.getUsername());
-        System.out.println("Get attribute from session (ProfileServlet) "+session.getAttribute("dbuser"));
+        session.setAttribute("dbuser", user);
+
+        //
+        request.setAttribute("user", user);
 
         request.getRequestDispatcher("/profil_seite.ftl").forward(request, response);
 

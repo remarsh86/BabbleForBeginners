@@ -41,6 +41,10 @@ form {
 .centerBlock{
 	margin:0 auto;
 }
+    input{
+        height: 60px;
+    }
+
 </style>
 
 <body>
@@ -52,12 +56,27 @@ form {
     <#--Clicks on the other buttons in Header are handled by the post method-->
     <form name = "clicks" method="post"  >
           <input type="submit" name="block" value = "Block/Unblock" />
-            <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
+            <input class="buttons" type="submit" name="follow" value = "Follow/Unfollow" /><br/>
             A whole bunch of info about the BabbleUser <br/>
     </form>
     <#--The New Babble button is a link to the create babble page-->
     <form  action="createbabble" >
-        <input type="submit"  value = "New Babble" /><br/>
+        <input height="40px" type="submit"  value = "New Babble" /><br/>
+        <table style="margin-left:30%; color: cornflowerblue; background-color: floralwhite">
+            <tr>
+                <th>Username: </th> <th>${user.username} </th>
+            </tr>
+            <tr>
+                <th>Name: </th> <th>${user.name} </th>
+            </tr>
+            <tr>
+                <th>Status: </th> <th>${user.status} </th>
+            </tr>
+
+
+        </table>
+
+
     </form>
     <#--Timeline is handled in the post method-->
     <form name = "timeline" method="post"  >

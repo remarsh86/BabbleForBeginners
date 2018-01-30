@@ -65,6 +65,7 @@ public class BabbleStore implements Closeable {
             preparedStatement.setString(1, babble.getText());
             preparedStatement.setString(2, babble.getCreator());
             preparedStatement.executeUpdate();
+            connection.commit();
 
             return true;
         }

@@ -13,6 +13,7 @@ public class BabbleUserStore implements Closeable{
     private boolean complete;
 
 
+
     public BabbleUserStore() throws StoreException {
         try {
             //connection = DBUtil.getConnection("testdb");
