@@ -11,10 +11,23 @@ import java.sql.*;
 public class BabbleUserStore implements Closeable{
     private Connection connection;
     private boolean complete;
+    private String username;
 
 
 
     public BabbleUserStore() throws StoreException {
+        try {
+            //connection = DBUtil.getConnection("testdb");
+            connection = DBUtil.getExternalConnection("babble"); //war dbtest
+            connection.setAutoCommit(false);
+            System.out.println("Good connection to db (BabbleUserStore)");
+        }
+        catch (SQLException e) {
+            throw new StoreException(e);
+        }
+    }
+    public BabbleUserStore(String user) throws StoreException {
+        this.username =  user;
         try {
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
@@ -56,11 +69,15 @@ public class BabbleUserStore implements Closeable{
         System.out.println("Retrieving BabbleUser in BabbleUserStore");
         PreparedStatement pstmt = null;
         BabbleUser user= null;
+        //System.out.println("getBabbleUser thinks username is: " + username);
 
         try {
             //todo: where babblueuser username = session attribute
-            pstmt = connection.prepareStatement("SELECT * FROM dbp72.babbleuser WHERE username = 'dbuser'");
-            ResultSet rs = pstmt.executeQuery();
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement("SELECT * FROM dbp72.babbleuser WHERE username = ?");
+            preparedStatement.setString(1, username);
+
+            ResultSet rs = preparedStatement.executeQuery();
             if(rs == null) System.out.println("No result set.");
             else {
                 while (rs.next()) {
@@ -69,12 +86,12 @@ public class BabbleUserStore implements Closeable{
                     user.setName(rs.getString(2));
                     user.setStatus(rs.getString(3));
                 }
+                System.out.println("BabbleUserStore says username is " + user.getUsername());
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("username is " + user.getUsername());
         return user;
     }
 

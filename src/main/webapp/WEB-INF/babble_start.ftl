@@ -51,10 +51,19 @@ body{
 		</div>
 	</div>
 
-    <form action="profile">
+    <form name="login" action="babble" method="post">
+        Enter Username: <input type="text" name="username"  /> <br/>
+        <input type="submit" value="Submit" />
+    </form>
+    <#--<form action="profile">-->
 
-        <input type="hidden" name="varname" value="username" />
-        <input type="submit" value="Send data">
+        <#--<input type="hidden" name="varname" value="username" />-->
+        <#--<input type="submit" value="Send data">-->
+    <#--</form>-->
+
+    <form name="gotoprofile" action="profile" method="post">
+
+        <input type="submit" value="Go to your profile page" />
     </form>
 </body>
 </html>

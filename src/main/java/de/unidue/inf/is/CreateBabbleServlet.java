@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class CreateBabbleServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    String attribute = "dbuser";
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,7 +46,7 @@ public class CreateBabbleServlet extends HttpServlet {
             //Add new babble to database babble
             //System.out.println("session attribute: " );
 
-            BabbleUser bs = (BabbleUser) session.getAttribute(attribute);
+            BabbleUser bs = (BabbleUser) session.getAttribute("babbler");
             System.out.println(bs.getUsername());
             Babble babble = new Babble(text, bs.getUsername()); //creator is current BabbleUser's username
             System.out.println("adding babble: " + babble.getText() + " "+ babble.getCreator());

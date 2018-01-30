@@ -56,7 +56,7 @@ form {
     <#--Clicks on the other buttons in Header are handled by the post method-->
     <form name = "clicks" method="post"  >
           <input type="submit" name="block" value = "Block/Unblock" />
-            <input class="buttons" type="submit" name="follow" value = "Follow/Unfollow" /><br/>
+            <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
             A whole bunch of info about the BabbleUser <br/>
     </form>
     <#--The New Babble button is a link to the create babble page-->
@@ -79,11 +79,17 @@ form {
 
     </form>
     <#--Timeline is handled in the post method-->
-    <form name = "timeline" method="post"  >
-        <#--<input type="submit" name="test" value = "Test" />-->
 
-        The timeline follow here.... <br/>
-    </form>
+    <#--<table class="datatable">-->
+        <#--&lt;#&ndash;<tr>&ndash;&gt;-->
+            <#--&lt;#&ndash;<th>Firstname</th>  <th>Lastname</th>&ndash;&gt;-->
+        <#--&lt;#&ndash;</tr>&ndash;&gt;-->
+    <#--<#list timelinelist as babble>-->
+    <#--<tr>-->
+        <#--<td>${babble.id}</td> <td>${babble.creator}</td>-->
+    <#--</tr>-->
+    <#--</#list>-->
+    <#--</table>-->
 
 
 </body>

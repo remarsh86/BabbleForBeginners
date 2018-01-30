@@ -6,7 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import de.unidue.inf.is.domain.Babble;
+import de.unidue.inf.is.domain.BabbleUser;
+import de.unidue.inf.is.stores.BabbleStore;
+import de.unidue.inf.is.stores.BabbleUserStore;
 import de.unidue.inf.is.utils.DBUtil;
 
 
@@ -17,6 +22,7 @@ import de.unidue.inf.is.utils.DBUtil;
 public final class BabbleServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+    private String username;
 
 
     @Override
@@ -37,6 +43,32 @@ public final class BabbleServlet extends HttpServlet {
         }
 
         request.getRequestDispatcher("babble_start.ftl").forward(request, response);
+    }
+
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+            IOException {
+        System.out.println("dopost methode von BabbleServlet.java");
+
+
+        //Get user input from website url: localhost:9072/babble
+        username =  request.getParameter("username");
+        System.out.println("input parameter from babble page is: " + username);
+
+
+        if (username !=null  && !username.isEmpty() ) {
+            //For session
+            BabbleUserStore store = new BabbleUserStore(username);
+            BabbleUser user = store.getBabbleUser();
+
+            //Sets the current session id as dbuser with a BabbleUser object as value
+            HttpSession session = request.getSession();
+            session.setAttribute("babbler", user);
+            //System.out.println("What is the user's name (BabbleServlet)" + user.getUsername());
+
+            doGet(request, response);
+        }
     }
 
 }
