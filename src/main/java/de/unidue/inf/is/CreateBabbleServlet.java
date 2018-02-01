@@ -33,7 +33,6 @@ public class CreateBabbleServlet extends HttpServlet {
             IOException {
         System.out.println("dopost methode von CreateBabbletServlet.java");
 
-
         BabbleStore b = new BabbleStore();
 
         HttpSession session=request.getSession();
@@ -44,15 +43,12 @@ public class CreateBabbleServlet extends HttpServlet {
 
         if (null != text  && !text.isEmpty() ) {
             //Add new babble to database babble
-            //System.out.println("session attribute: " );
-
             BabbleUser bs = (BabbleUser) session.getAttribute("babbler");
             System.out.println(bs.getUsername());
             Babble babble = new Babble(text, bs.getUsername()); //creator is current BabbleUser's username
             System.out.println("adding babble: " + babble.getText() + " "+ babble.getCreator());
-            //new BabbleStore().addBabble(babble);
             boolean added = b.addBabble(babble);
-            //System.out.printf("babble added? "+ String.valueOf(added));
+
 
             b.test();
             b.close();

@@ -2,8 +2,10 @@ package de.unidue.inf.is;
 
 import de.unidue.inf.is.domain.Babble;
 import de.unidue.inf.is.domain.BabbleUser;
+import de.unidue.inf.is.domain.Follows;
 import de.unidue.inf.is.domain.User;
 import de.unidue.inf.is.stores.BabbleUserStore;
+import de.unidue.inf.is.stores.FollowStore;
 import de.unidue.inf.is.stores.TimelineStore;
 
 import javax.servlet.ServletException;
@@ -22,6 +24,7 @@ public class ProfileServlet extends HttpServlet {
     private BabbleUser bs = null;
     private List<Babble> timelineList = new ArrayList<>();
     String clickedUser;
+    HttpSession session;
 
 
     @Override
@@ -29,7 +32,7 @@ public class ProfileServlet extends HttpServlet {
             throws ServletException, IOException {
 
         //For session
-        HttpSession session = request.getSession(false);
+//        HttpSession session = request.getSession(false);
         bs = (BabbleUser) session.getAttribute("babbler");
         System.out.println(" session username is (on profile page):" + bs.getUsername() );
         request.setAttribute("primaryuser", bs.getUsername());
@@ -54,15 +57,6 @@ public class ProfileServlet extends HttpServlet {
             request.setAttribute("users", timelineList);
         }
 
-//        //For Personal Information
-//        request.setAttribute("user", bs);
-//
-//
-////        //For timeline: Pass list of babbles to profile page
-//        TimelineStore store = new TimelineStore(bs.getUsername());
-//        timelineList = store.createTimeline(); //maybe return
-//        for(Babble b : timelineList) System.out.println(b.getId());
-//        request.setAttribute("users", timelineList);
 
         request.getRequestDispatcher("/profil_seite.ftl").forward(request, response);
 
@@ -71,6 +65,7 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
+        session = request.getSession(false);
 
         String blockButton = request.getParameter("block");
         String followButton = request.getParameter("follow");
@@ -83,7 +78,31 @@ public class ProfileServlet extends HttpServlet {
         }
         //if followButton clicked
         if (null != followButton  && !followButton.isEmpty()) {
+            System.out.println("What is clickedUser " + clickedUser);
+            //do you follow clickedUser?? if yes -> unfollow. If no -> follow
+
             System.out.println("You clicked the follow Button");
+            BabbleUser bs = (BabbleUser) session.getAttribute("babbler");
+            System.out.println(bs.getUsername());
+            //if another user has been clicked (clickedUser parameter) and the clicked user is not oneself,
+            //then session's babbleuser object can follow the clickeduser
+            if(clickedUser != null && !clickedUser.equals(bs.getUsername())){
+
+                Follows follows = new Follows(bs.getUsername(), clickedUser);
+                FollowStore followStore = new FollowStore();
+                boolean doesFollow = followStore.doTheyFollow(bs.getUsername(), clickedUser);
+
+                System.out.println("Do they follow? " + doesFollow);
+                if(doesFollow) //current session use does follow clkuser=> unfollow
+                    followStore.deleteFromFollow(bs.getUsername(), clickedUser);
+                if(!doesFollow) //current session use doesn't follow clkuser=> follow
+                     followStore.addFollows(follows);
+                System.out.println("Do they follow now? "+ doesFollow);
+                followStore.complete();
+                followStore.close();
+
+            }else System.out.println("You clicked on yourself!");
+
         }
 
         doGet(request, response);

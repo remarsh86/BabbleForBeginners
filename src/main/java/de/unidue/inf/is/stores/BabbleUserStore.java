@@ -64,10 +64,9 @@ public class BabbleUserStore implements Closeable{
 
     }
 
-    //todo
+
     public BabbleUser getBabbleUser(){
         System.out.println("Retrieving BabbleUser in BabbleUserStore");
-        PreparedStatement pstmt = null;
         BabbleUser user= null;
         //System.out.println("getBabbleUser thinks username is: " + username);
 

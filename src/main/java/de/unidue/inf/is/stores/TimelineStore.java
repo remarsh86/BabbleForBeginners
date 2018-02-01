@@ -48,6 +48,7 @@ public class TimelineStore implements Closeable {
                 "WHERE tbl.id NOT IN (select b.id from dbp72.babble b " +
                 "join dbp72.follows f on b.creator = f.followee JOIN dbp72.blocks bk " +
                 "ON f.followee = bk.blocker AND f.follower = bk.blockee where f.follower = ?)" +
+                " " +
                 " ORDER BY tbl.created ASC ";
         try {
 

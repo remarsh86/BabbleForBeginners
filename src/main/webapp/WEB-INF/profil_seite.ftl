@@ -67,7 +67,7 @@ input{
     <form name = "clicks" method="post"  >
           <input type="submit" name="block" value = "Block/Unblock" />
             <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
-            You are logged in as ${primaryuser} <br/>
+            You are logged in as @${primaryuser} <br/>
     </form>
     <#--The New Babble button is a link to the create babble page-->
     <form  action="createbabble" >
