@@ -36,21 +36,19 @@ public class TimelineStore implements Closeable {
     public List<Babble> createTimeline(){
 
         List<Babble> list = new ArrayList<>();
-        String sqlstring = "SELECT * FROM \n" +
-                "\t(SELECT b2.id, b2.text, b2.created, b2.creator FROM babble b2 WHERE b2.creator = ? \n" +
-                "\tUNION ALL\n" +
-                "\tSELECT b1.id, b1.text, b1.created, b1.creator FROM babble b1 JOIN follows f1 ON b1.creator = f1.followee\n" +
-                "\tWHERE f1.follower = ? \n" +
-                "\tUNION ALL\n" +
-                "\tSELECT b1.id, b1.text, lb.created, b1.creator FROM babble b1 JOIN LikesBabble lb ON lb.babble = b1.id\n" +
-                "\tWHERE lb.username = ?  \n" +
-                "\tUNION ALL \n" +
-                "\tSELECT b1.id, b1.text, rb.created, b1.creator FROM babble b1 JOIN ReBabble rb ON rb.babble = b1.id\n" +
-                "\tWHERE rb.username = ? ) AS tbl\n" +
-                "WHERE tbl.id  NOT IN (select b.id \n" +
-                "from babble b join follows f on b.creator = f.followee \n" +
-                "JOIN blocks bk ON f.followee = bk.blocker AND f.follower = bk.blockee\n" +
-                "where f.follower = ?)";
+        String sqlstring = "SELECT * FROM (SELECT b2.id, b2.text, b2.created, b2.creator " +
+                "FROM dbp72.babble b2 WHERE b2.creator = ? " +
+                "UNION ALL SELECT b1.id, b1.text, b1.created, b1.creator " +
+                "FROM dbp72.babble b1 JOIN dbp72.follows f1 ON b1.creator = f1.followee " +
+                "WHERE f1.follower = ? " +
+                "UNION ALL SELECT b1.id, b1.text, lb.created, b1.creator " +
+                "FROM dbp72.babble b1 JOIN dbp72.LikesBabble lb ON lb.babble = b1.id " +
+                "WHERE lb.username = ? UNION ALL SELECT b1.id, b1.text, rb.created, b1.creator " +
+                "FROM dbp72.babble b1 JOIN dbp72.ReBabble rb ON rb.babble = b1.id WHERE rb.username = ? ) AS tbl " +
+                "WHERE tbl.id NOT IN (select b.id from dbp72.babble b " +
+                "join dbp72.follows f on b.creator = f.followee JOIN dbp72.blocks bk " +
+                "ON f.followee = bk.blocker AND f.follower = bk.blockee where f.follower = ?)" +
+                " ORDER BY tbl.created ASC ";
         try {
 
             PreparedStatement preparedStatement = connection

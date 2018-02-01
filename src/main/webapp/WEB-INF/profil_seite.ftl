@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head><title>Profile</title>
 <style type="text/css">
 * {
@@ -41,11 +41,21 @@ form {
 .centerBlock{
 	margin:0 auto;
 }
-    input{
+
+.boxed {
+    border: 1px cornflowerblue ;
+}
+
+input{
         height: 60px;
-    }
+}
+
+
 
 </style>
+
+
+
 
 <body>
     <#--The Search  button is a link to the searchbabble page-->
@@ -57,7 +67,7 @@ form {
     <form name = "clicks" method="post"  >
           <input type="submit" name="block" value = "Block/Unblock" />
             <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
-            A whole bunch of info about the BabbleUser <br/>
+            You are logged in as ${primaryuser} <br/>
     </form>
     <#--The New Babble button is a link to the create babble page-->
     <form  action="createbabble" >
@@ -80,16 +90,20 @@ form {
     </form>
     <#--Timeline is handled in the post method-->
 
-    <#--<table class="datatable">-->
-        <#--&lt;#&ndash;<tr>&ndash;&gt;-->
-            <#--&lt;#&ndash;<th>Firstname</th>  <th>Lastname</th>&ndash;&gt;-->
-        <#--&lt;#&ndash;</tr>&ndash;&gt;-->
-    <#--<#list timelinelist as babble>-->
-    <#--<tr>-->
-        <#--<td>${babble.id}</td> <td>${babble.creator}</td>-->
-    <#--</tr>-->
-    <#--</#list>-->
-    <#--</table>-->
+    <#--&lt;#&ndash;<table class="datatable">&ndash;&gt;-->
+
+    <#list users as babble>
+    <#--<tr><td>${babble.creator}</td>-->
+        <div class="boxed"> <br/>
+
+            <a href="profile?clickedUser=${babble.creator}"><h3>Student@${babble.creator}</h3> </a>
+            <#--<h3>Student@${babble.creator}</h3>-->
+            <p>${babble.text}</p>
+            <td>${babble.created}</td> <br/>
+        </div>
+    </tr>
+    </#list>
+
 
 
 </body>

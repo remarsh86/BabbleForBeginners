@@ -21,6 +21,7 @@ public class ProfileServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private BabbleUser bs = null;
     private List<Babble> timelineList = new ArrayList<>();
+    String clickedUser;
 
 
     @Override
@@ -31,15 +32,37 @@ public class ProfileServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         bs = (BabbleUser) session.getAttribute("babbler");
         System.out.println(" session username is (on profile page):" + bs.getUsername() );
+        request.setAttribute("primaryuser", bs.getUsername());
 
+        clickedUser = request.getParameter("clickedUser");
+        System.out.println("clicked user is: "+ clickedUser);
 
-        //For Personal Information
-        request.setAttribute("user", bs);
+        if(clickedUser !=null){
+            BabbleUserStore store = new BabbleUserStore(clickedUser);
+            BabbleUser user = store.getBabbleUser();
+            request.setAttribute("user", user);
+            TimelineStore tstore = new TimelineStore(clickedUser);
+            //for(Babble b : timelineList) System.out.println(b.getId());
+            timelineList = tstore.createTimeline();
+            request.setAttribute("users", timelineList);
 
-//        //For timeline: Pass list of babbles to profile page
+        }else{
+            request.setAttribute("user", bs);
+            TimelineStore store = new TimelineStore(bs.getUsername());
+            timelineList = store.createTimeline(); //maybe return
+            //for(Babble b : timelineList) System.out.println(b.getId());
+            request.setAttribute("users", timelineList);
+        }
+
+//        //For Personal Information
+//        request.setAttribute("user", bs);
+//
+//
+////        //For timeline: Pass list of babbles to profile page
 //        TimelineStore store = new TimelineStore(bs.getUsername());
 //        timelineList = store.createTimeline(); //maybe return
-        //request.setAttribute("datatable", timelineList);
+//        for(Babble b : timelineList) System.out.println(b.getId());
+//        request.setAttribute("users", timelineList);
 
         request.getRequestDispatcher("/profil_seite.ftl").forward(request, response);
 
