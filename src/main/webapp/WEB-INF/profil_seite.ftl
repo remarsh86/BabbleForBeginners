@@ -14,6 +14,12 @@ form {
     display: inline;
 }
 
+/*div{*/
+    /*text-align: left;*/
+    /**/
+/*}*/
+
+
 
 #wrapper{
    width:960px;
@@ -64,7 +70,7 @@ input{
 
     </form>
     <#--Clicks on the other buttons in Header are handled by the post method-->
-    <form name = "clicks" method="post"  >
+    <form name = "clicks"   action = "profile" method="post"  >
           <input type="submit" name="block" value = "Block/Unblock" />
             <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
             You are logged in as @${primaryuser} <br/>
@@ -72,7 +78,7 @@ input{
     <#--The New Babble button is a link to the create babble page-->
     <form  action="createbabble" >
         <input height="40px" type="submit"  value = "New Babble" /><br/>
-        <table style="margin-left:30%; color: cornflowerblue; background-color: floralwhite">
+        <table style="margin-left:30%; color: cornflowerblue">
             <tr>
                 <th>Username: </th> <th>${user.username} </th>
             </tr>
@@ -91,20 +97,40 @@ input{
     <#--Timeline is handled in the post method-->
 
     <#--&lt;#&ndash;<table class="datatable">&ndash;&gt;-->
-
+    <table style="margin-left:30%; color: cornflowerblue">
     <#list users as babble>
     <#--<tr><td>${babble.creator}</td>-->
-        <div class="boxed"> <br/>
+        <div style=" color: cornflowerblue" > <br/>
 
             <a href="profile?clickedUser=${babble.creator}"><h3>Student@${babble.creator}</h3> </a>
             <#--<h3>Student@${babble.creator}</h3>-->
-            <p>${babble.text}</p>
-            <td>${babble.created}</td> <br/>
+            <p>${babble.text} <br/> ${babble.created}</p>
+
+            <#--check whether this babble was rebabbled-->
+            <#list rebabbles as b>
+                <div  text-align = "left">
+                    <#if b.created == babble.created >
+                        @${user.username} rebabbled <br/>
+                    </#if>
+                </div>
+            </#list>
+            <#--check whether this babble was liked-->
+            <#list likes as l>
+                <div class="boxed">
+                    <#if l.created == babble.created && l.babble = babble.id >
+
+                        @${user.username} ${l.type}  <br/>
+
+                    </#if>
+                </div>
+            </#list>
+
+
         </div>
     </tr>
     </#list>
 
-
+    </table>
 
 </body>
 </html>

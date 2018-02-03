@@ -1,15 +1,20 @@
 package de.unidue.inf.is.domain;
 
+import java.sql.Timestamp;
+
 public final class LikesBabble {
     private String username;
-    private Babble babble;
-    private String like;
+    private int babble;
+    private String type;
+    private Timestamp created;
 
-    public LikesBabble(String username, Babble babble, String like){
+    public LikesBabble(String username, int babble, String type){
         this.setUsername(username);
         this.setBabble(babble);
-        this.setLike(like);
+        this.setType(type);
     }
+
+    public LikesBabble(){}
 
 
     public String getUsername() {
@@ -20,19 +25,23 @@ public final class LikesBabble {
         this.username = username;
     }
 
-    public Babble getBabble() {
+    public int getBabble() {
         return babble;
     }
 
-    public void setBabble(Babble babble) {
+    public void setBabble(int babble) {
         this.babble = babble;
     }
 
-    public String getLike() {
-        return like;
+    public String getType() {
+        return type;
     }
 
-    public void setLike(String like) {
-        this.like = like;
+    public void setType(String like) {
+        this.type = like;
     }
+
+    public void setCreated(Timestamp created) { this.created = created;}
+
+    public Timestamp getCreated(){ return this.created;}
 }

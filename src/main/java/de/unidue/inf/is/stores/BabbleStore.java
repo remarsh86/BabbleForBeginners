@@ -7,6 +7,8 @@ import de.unidue.inf.is.utils.DBUtil;
 import java.io.Closeable;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BabbleStore implements Closeable {
 
@@ -73,6 +75,74 @@ public class BabbleStore implements Closeable {
             throw new StoreException(e);
 
         }
+    }
+
+    public List<Babble> searchBabble(String substring){
+        String string2 = "%" + substring + "%";
+        List<Babble> list = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement("SELECT * FROM dbp72.babble where text like ? ");
+            preparedStatement.setString(1, string2);
+
+            ResultSet rs = preparedStatement.executeQuery();
+            if(rs == null) System.out.println("No result set.");
+            else {
+                while (rs.next()) {
+                    System.out.println("result set not null");
+                    //System.out.println(rs.getInt(1) + " " + rs.getString(2) +" "+rs.getTimestamp(3)+" " +rs.getString(4));
+                    Babble b = new Babble();
+                    b.setId(rs.getInt(1));
+                    b.setText(rs.getString(2));
+                    b.setCreated(rs.getTimestamp(3));
+                    b.setCreator(rs.getString(4));
+                    list.add(b);
+                }
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+       return list;
+    }
+
+    public List<Babble> searchBabble2(String substring){
+        String string1 = substring.toUpperCase();
+        String string2 = "%" + string1 + "%";
+        List<Babble> list = new ArrayList<>();
+        try {
+            Statement st = connection.createStatement();
+            st.executeUpdate("create view nocasebabble as select b.id, upper(b.text), b.created, b.creator from dbp72.babble b");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        String sqlstring = "SELECT * FROM nocasebabble where text like ? ";
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement(sqlstring);
+            preparedStatement.setString(1, string2);
+
+            ResultSet rs = preparedStatement.executeQuery();
+            if(rs == null) System.out.println("No result set.");
+            else {
+                while (rs.next()) {
+                    System.out.println("result set not null");
+                    //System.out.println(rs.getInt(1) + " " + rs.getString(2) +" "+rs.getTimestamp(3)+" " +rs.getString(4));
+                    Babble b = new Babble();
+                    b.setId(rs.getInt(1));
+                    b.setText(rs.getString(2));
+                    b.setCreated(rs.getTimestamp(3));
+                    b.setCreator(rs.getString(4));
+                    list.add(b);
+                }
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
     public void complete() {

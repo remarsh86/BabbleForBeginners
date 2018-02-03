@@ -68,10 +68,8 @@ public class BabbleUserStore implements Closeable{
     public BabbleUser getBabbleUser(){
         System.out.println("Retrieving BabbleUser in BabbleUserStore");
         BabbleUser user= null;
-        //System.out.println("getBabbleUser thinks username is: " + username);
 
         try {
-            //todo: where babblueuser username = session attribute
             PreparedStatement preparedStatement = connection
                     .prepareStatement("SELECT * FROM dbp72.babbleuser WHERE username = ?");
             preparedStatement.setString(1, username);

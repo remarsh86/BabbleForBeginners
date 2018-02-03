@@ -40,13 +40,25 @@
 
 <body>
   <form name="babble" action="searchbabbles" method="post">
-    <textarea name="comment" rows="50" cols="70">
-    Please enter a comment.
-    </textarea> <br/>
-
+    <textarea name="comment" rows="10" cols="50">Please enter a comment.</textarea> <br/>
     <input type="submit" value="Search for babbles" />
   </form>
 
+ <table style="margin-left:30%; color: cornflowerblue">
+    <#list babblelist as babble>
+    <#--<tr><td>${babble.creator}</td>-->
+        <div style=" color: cornflowerblue" > <br/>
+
+            <a href="profile?clickedUser=${babble.creator}"><h3>Student@${babble.creator}</h3> </a>
+            <#--<h3>Student@${babble.creator}</h3>-->
+            <p>${babble.text} <br/> ${babble.created}</p>
+
+
+        </div>
+    </tr>
+    </#list>
+
+    </table>
 
 </body>
 </html>
