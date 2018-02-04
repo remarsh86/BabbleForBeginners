@@ -25,14 +25,43 @@ public class RebabbleStore implements Closeable {
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
             connection.setAutoCommit(false);
-            System.out.println("There is a good conenction in rebabblestore" );
         }
         catch (SQLException e) {
             throw new StoreException(e);
         }
     }
 
+    public List<Babble> userRebabbledBabble(String username, Babble babble) {
+        int id = babble.getId();
+        List<Babble> list = new ArrayList<>();
+        String sqlstring = " SELECT b.id, b.text, reb.created, b.creator" +
+                "  FROM dbp72.Rebabble reb JOIN dbp72.babble b ON reb.babble = b.id " +
+                "  WHERE reb.username = ? and reb.babble = ?";
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement(sqlstring);
+            preparedStatement.setString(1, username);
+            preparedStatement.setInt(2, id);
+            ResultSet rs = preparedStatement.executeQuery();
+            if (rs == null) System.out.println("No result set.");
+            else {
+                while (rs.next()) {
+                    //   System.out.println(" " + rs.getInt(1)+
+                    //          rs.getString(2) + rs.getTimestamp(3) + rs.getString(4));
+                    Babble b = new Babble();
+                    b.setId(rs.getInt(1));
+                    b.setText(rs.getString(2));
+                    b.setCreated(rs.getTimestamp(3));
+                    b.setCreator(rs.getString(4));
+                    list.add(b);
+                }
+            }
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 
     public List<Babble> userRebabbled(String username) {
         List<Babble> list = new ArrayList<>();
@@ -62,6 +91,39 @@ public class RebabbleStore implements Closeable {
             e.printStackTrace();
         }
         return list;
+    }
+
+    public void insertRebabble(String user, int id){
+        try {
+
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement("INSERT INTO dbp72.rebabble (username, babble) values " +
+                            " (?, ?)");
+            preparedStatement.setString(1, user);
+            preparedStatement.setInt(2, id);
+            preparedStatement.executeUpdate();
+
+        }
+        catch (SQLException e) {
+
+            throw new StoreException(e);
+
+        }
+    }
+
+    public void deleteRebabble(String user, int id){
+        String sqlstring = "delete from dbp72.rebabble reb  " +
+                " WHERE reb.username = ? and reb.babble = ? ";
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement(sqlstring);
+            preparedStatement.setString(1, user);
+            preparedStatement.setInt(2, id);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

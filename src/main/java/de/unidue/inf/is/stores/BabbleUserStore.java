@@ -20,7 +20,6 @@ public class BabbleUserStore implements Closeable{
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
             connection.setAutoCommit(false);
-            System.out.println("Good connection to db (BabbleUserStore)");
         }
         catch (SQLException e) {
             throw new StoreException(e);

@@ -52,6 +52,7 @@ form {
     border: 1px cornflowerblue ;
 }
 
+
 input{
         height: 60px;
 }
@@ -76,7 +77,7 @@ input{
             You are logged in as @${primaryuser} <br/>
     </form>
     <#--The New Babble button is a link to the create babble page-->
-    <form  action="createbabble" >
+    <form  action="createbabble" class = "boxed" >
         <input height="40px" type="submit"  value = "New Babble" /><br/>
         <table style="margin-left:30%; color: cornflowerblue">
             <tr>
@@ -97,15 +98,16 @@ input{
     <#--Timeline is handled in the post method-->
 
     <#--&lt;#&ndash;<table class="datatable">&ndash;&gt;-->
-    <table style="margin-left:30%; color: cornflowerblue">
+    <table style="margin-left:30%; color: cornflowerblue" class = "boxed">
     <#list users as babble>
     <#--<tr><td>${babble.creator}</td>-->
         <div style=" color: cornflowerblue" > <br/>
 
             <a href="profile?clickedUser=${babble.creator}"><h3>Student@${babble.creator}</h3> </a>
             <#--<h3>Student@${babble.creator}</h3>-->
-            <p>${babble.text} <br/> ${babble.created}</p>
-
+            <form action ="detail" >
+            <p> <a href="detail?clickedBabble=${babble.id}"> ${babble.text}</a> <br/> ${babble.created}</p>
+            </form>
             <#--check whether this babble was rebabbled-->
             <#list rebabbles as b>
                 <div  text-align = "left">

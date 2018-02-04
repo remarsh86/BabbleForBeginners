@@ -26,7 +26,6 @@ public class TimelineStore implements Closeable {
             //connection = DBUtil.getConnection("testdb");
             connection = DBUtil.getExternalConnection("babble"); //war dbtest
             connection.setAutoCommit(false);
-            System.out.println("There is a good conenction and username is " + username);
         }
         catch (SQLException e) {
             throw new StoreException(e);

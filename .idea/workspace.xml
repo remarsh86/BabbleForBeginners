@@ -2,31 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5e14fa4-3c29-4727-984d-8e9a33f6fac7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BlockStore.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/FollowStore.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/DetailServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/detail_seite.ftl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/BlockStore.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/LikeStore.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/RebabbleStore.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/SearchServlet.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/SearchServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/Blocks.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/Blocks.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LikesBabble.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LikesBabble.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/ReBabble.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/ReBabble.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleUserStore.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleUserStore.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/utils/DBUtil.java" afterPath="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/utils/DBUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_search.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_search.ftl" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/ProfileServlet.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/ProfileServlet.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/SearchServlet.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/SearchServlet.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/domain/Blocks.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/domain/Blocks.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/domain/LikesBabble.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/domain/LikesBabble.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/domain/ReBabble.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/domain/ReBabble.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/BabbleStore.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/BabbleStore.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/BabbleUserStore.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/BabbleUserStore.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/TimelineStore.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/stores/TimelineStore.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/utils/DBUtil.class" afterPath="$PROJECT_DIR$/target/classes/de/unidue/inf/is/utils/DBUtil.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,87 +47,21 @@
       <file leaf-file-name="ProfileServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="149" column="50" lean-forward="false" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="50" />
+            <state relative-caret-position="180">
+              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BabbleServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/BabbleServlet.java">
+      <file leaf-file-name="detail_seite.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/detail_seite.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="62" column="52" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="62" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/SearchServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="babble_search.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_search.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="42" column="89" lean-forward="false" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimelineStore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="111" column="12" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+            <state relative-caret-position="829">
+              <caret line="133" column="27" lean-forward="false" selection-start-line="133" selection-start-column="27" selection-end-line="133" selection-end-column="27" />
               <folding>
-                <marker date="1517667609000" expanded="true" signature="1092:2138" ph="SELECT * FRO... id" />
-                <marker date="1517667609000" expanded="true" signature="1107:1215" ph="SELECT b2.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="1247:1427" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="1459:1636" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="1647:1800" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="1852:2069" ph="select b.id babble" />
-                <marker date="1517667609000" expanded="true" signature="3281:5003" ph="SELECT * FRO... id" />
-                <marker date="1517667609000" expanded="true" signature="3319:3405" ph="SELECT b2.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3319:3406" ph="SELECT b2.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3461:3619" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3461:3620" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3675:3831" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3675:3832" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3889:4042" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="3889:4043" ph="SELECT b1.id... babble" />
-                <marker date="1517667609000" expanded="true" signature="4097:4345" ph="select b.id babble" />
-                <marker date="1517667609000" expanded="true" signature="4097:4346" ph="select b.id babble" />
-                <marker date="1517667609000" expanded="true" signature="4391:4657" ph="select b.id babble" />
-                <marker date="1517667609000" expanded="true" signature="4391:4658" ph="select b.id babble" />
-                <marker date="1517667609000" expanded="true" signature="4727:4953" ph="select b.id babble" />
-                <marker date="1517667609000" expanded="true" signature="4727:4954" ph="select b.id babble" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockStore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BlockStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-              <folding>
-                <marker date="1517664849000" expanded="true" signature="981:1028" ph="SELECT * FRO... blocks" />
-                <marker date="1517664849000" expanded="true" signature="981:1081" ph="SELECT * FRO... blocks" />
-                <marker date="1517664849000" expanded="true" signature="1974:2066" ph="DELETE from dbp72.blocks... " />
-                <marker date="1517664849000" expanded="true" signature="2503:2571" ph="INSERT INTO dbp72.blocks... " />
-                <marker date="1517664849000" expanded="true" signature="3092:3118" ph="SELECT * FRO... blocks" />
-                <marker date="1517664849000" expanded="true" signature="3092:3119" ph="SELECT * FRO... blocks" />
+                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,32 +70,72 @@
       <file leaf-file-name="profil_seite.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="132" column="12" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="132" selection-end-column="12" />
+            <state relative-caret-position="517">
+              <caret line="136" column="7" lean-forward="false" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetailServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/DetailServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
               <folding>
-                <element signature="n#style#0;n#table#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BabbleStore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java">
+      <file leaf-file-name="BabbleServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/BabbleServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="296">
+              <caret line="62" column="52" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="62" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LikesBabble.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LikesBabble.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="43" column="71" lean-forward="false" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimelineStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#test#0;class#BabbleStore#0" expanded="false" />
-                <element signature="method#addBabble#0;class#BabbleStore#0" expanded="false" />
-                <element signature="method#searchBabble#0;class#BabbleStore#0" expanded="false" />
-                <element signature="e#4852#4853#0" expanded="true" />
-                <element signature="e#4883#4884#0" expanded="true" />
-                <marker date="1517676921000" expanded="true" signature="3609:3705" ph="create view nocasebabble... " />
-                <marker date="1517676921000" expanded="true" signature="3637:3705" ph="select b.id,... babble" />
-                <marker date="1517676921000" expanded="true" signature="3815:3859" ph="SELECT * FRO... babble" />
+                <marker date="1517776677000" expanded="true" signature="1002:2048" ph="SELECT * FRO... id" />
+                <marker date="1517776677000" expanded="true" signature="1017:1125" ph="SELECT b2.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="1157:1337" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="1369:1546" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="1557:1710" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="1762:1979" ph="select b.id babble" />
+                <marker date="1517776677000" expanded="true" signature="3191:4913" ph="SELECT * FRO... id" />
+                <marker date="1517776677000" expanded="true" signature="3229:3315" ph="SELECT b2.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3229:3316" ph="SELECT b2.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3371:3529" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3371:3530" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3585:3741" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3585:3742" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3799:3952" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="3799:3953" ph="SELECT b1.id... babble" />
+                <marker date="1517776677000" expanded="true" signature="4007:4255" ph="select b.id babble" />
+                <marker date="1517776677000" expanded="true" signature="4007:4256" ph="select b.id babble" />
+                <marker date="1517776677000" expanded="true" signature="4301:4567" ph="select b.id babble" />
+                <marker date="1517776677000" expanded="true" signature="4301:4568" ph="select b.id babble" />
+                <marker date="1517776677000" expanded="true" signature="4637:4863" ph="select b.id babble" />
+                <marker date="1517776677000" expanded="true" signature="4637:4864" ph="select b.id babble" />
               </folding>
             </state>
           </provider>
@@ -176,22 +144,56 @@
       <file leaf-file-name="LikeStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            <state relative-caret-position="178">
+              <caret line="190" column="9" lean-forward="false" selection-start-line="179" selection-start-column="8" selection-end-line="190" selection-end-column="9" />
               <folding>
-                <marker date="1517656380000" expanded="true" signature="1084:1243" ph="SELECT likes... likesbabble" />
-                <marker date="1517656380000" expanded="true" signature="1084:1244" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="1091:1272" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="1091:1297" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="2312:2521" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="3544:3725" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="4695:4854" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="4695:4855" ph="SELECT likes... likesbabble" />
+                <marker date="1517778583000" expanded="true" signature="5795:5912" ph="update dbp72.likesbabble... " />
+                <marker date="1517778583000" expanded="true" signature="5802:5912" ph="delete from dbp72.likesbabble... " />
+                <marker date="1517778583000" expanded="true" signature="6486:6569" ph="delete from username" />
+                <marker date="1517778583000" expanded="true" signature="6486:6590" ph="delete from dbp72.likesbabble... " />
+                <marker date="1517778583000" expanded="true" signature="7211:7317" ph="INSERT INTO dbp72.likesbabble... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Babble.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/Babble.java">
+      <file leaf-file-name="BabbleStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="128">
+              <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#test#0;class#BabbleStore#0" expanded="false" />
+                <element signature="method#searchBabble2#0;class#BabbleStore#0" expanded="false" />
+                <element signature="e#6059#6060#0" expanded="true" />
+                <element signature="e#6090#6091#0" expanded="true" />
+                <marker date="1517782194000" expanded="true" signature="1591:1655" ph="delete from dbp72.babble... " />
+                <marker date="1517782194000" expanded="true" signature="2200:2254" ph="INSERT INTO dbp72.babble... " />
+                <marker date="1517782194000" expanded="true" signature="2749:2788" ph="Select * fro... babble" />
+                <marker date="1517782194000" expanded="true" signature="3630:3674" ph="SELECT * FRO... babble" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RebabbleStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="125" column="9" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="125" selection-end-column="9" />
+              <folding>
+                <marker date="1517780955000" expanded="true" signature="993:1188" ph="SELECT b.id,... Rebabble" />
+                <marker date="1517780955000" expanded="true" signature="2296:2472" ph="SELECT b.id,... Rebabble" />
+                <marker date="1517780955000" expanded="true" signature="3571:3664" ph="INSERT INTO dbp72.rebabble... " />
+                <marker date="1517780955000" expanded="true" signature="3995:4090" ph="delete from dbp72.rebabble... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -231,10 +233,8 @@
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/utils/ProfileServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LengthException.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/HelloServlet.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_search" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/create_babble.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/BabbleUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/Rebabble.java" />
@@ -247,18 +247,22 @@
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/FollowStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/utils/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/ReBabble.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LikesBabble.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleUserStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/Blocks.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BlockStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/SearchServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_search.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleUserStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/detail_seite.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unidue/inf/is/DetailServlet.java" />
       </list>
     </option>
   </component>
@@ -279,11 +283,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-38" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="135" />
+    <option name="y" value="37" />
     <option name="width" value="1280" />
-    <option name="height" value="697" />
+    <option name="height" value="611" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -363,15 +367,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="is" type="462c0819:PsiDirectoryNode" />
               <item name="stores" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="babble" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BabbleForBeginners" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="is" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="babble" type="b2602c69:ProjectViewProjectNode" />
@@ -686,15 +681,16 @@
       <workItem from="1517325984137" duration="9069000" />
       <workItem from="1517335691691" duration="565000" />
       <workItem from="1517412676197" duration="8590000" />
-      <workItem from="1517477980415" duration="45861000" />
+      <workItem from="1517477980415" duration="79297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114521000" />
+    <option name="totallyTimeSpent" value="147957000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="697" extended-state="6" />
+    <frame x="135" y="37" width="1280" height="611" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -705,19 +701,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07996769" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29069766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29263565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2180937" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16882068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4451827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44379845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -768,25 +764,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8760">
-          <caret line="633" column="19" lean-forward="false" selection-start-line="633" selection-start-column="19" selection-end-line="633" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/sql/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_search" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -849,26 +831,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/HelloServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/babble_start.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/create_babble.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1011,22 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/ReBabble.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1040,32 +990,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LikesBabble.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="43" column="71" lean-forward="false" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/ibm/db2/jdbc/1.0/jdbc-1.0.jar!/com/ibm/db2/jcc/am/om.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="522" column="0" lean-forward="false" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2156#2157#0" expanded="false" />
-            <element signature="e#2187#2188#0" expanded="false" />
-            <marker date="1517653633000" expanded="true" signature="1021:1197" ph="SELECT b.id,... Rebabble" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1090,151 +1019,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/FollowStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="90" column="9" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="90" selection-end-column="9" />
-          <folding>
-            <element signature="method#printFollowTable#0;class#FollowStore#0" expanded="false" />
-            <element signature="method#close#0;class#FollowStore#0" expanded="false" />
-            <marker date="1517502324000" expanded="true" signature="952:1012" ph="INSERT INTO dbp72.follows... " />
-            <marker date="1517502324000" expanded="true" signature="1522:1620" ph="SELECT * FRO... follows" />
-            <marker date="1517502324000" expanded="true" signature="2415:2460" ph="DELETE from dbp72.follows... " />
-            <marker date="1517502324000" expanded="true" signature="2415:2497" ph="DELETE from dbp72.follows... " />
-            <marker date="1517502324000" expanded="true" signature="2415:2510" ph="DELETE from dbp72.follows... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleUserStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="90" column="9" lean-forward="false" selection-start-line="71" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-          <folding>
-            <element signature="method#test#0;class#BabbleUserStore#0" expanded="false" />
-            <marker date="1517660576000" expanded="true" signature="2320:2368" ph="SELECT * FRO... babbleuser" />
-            <marker date="1517660576000" expanded="true" signature="2320:2369" ph="SELECT * FRO... babbleuser" />
-            <marker date="1517660576000" expanded="true" signature="2320:2371" ph="SELECT * FRO... babbleuser" />
-            <marker date="1517660576000" expanded="true" signature="3239:3318" ph="insert into babbleuser... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <marker date="1517656380000" expanded="true" signature="1084:1243" ph="SELECT likes... likesbabble" />
-            <marker date="1517656380000" expanded="true" signature="1084:1244" ph="SELECT likes... likesbabble" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="132" column="12" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="132" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BlockStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding>
-            <marker date="1517664849000" expanded="true" signature="981:1028" ph="SELECT * FRO... blocks" />
-            <marker date="1517664849000" expanded="true" signature="981:1081" ph="SELECT * FRO... blocks" />
-            <marker date="1517664849000" expanded="true" signature="1974:2066" ph="DELETE from dbp72.blocks... " />
-            <marker date="1517664849000" expanded="true" signature="2503:2571" ph="INSERT INTO dbp72.blocks... " />
-            <marker date="1517664849000" expanded="true" signature="3092:3118" ph="SELECT * FRO... blocks" />
-            <marker date="1517664849000" expanded="true" signature="3092:3119" ph="SELECT * FRO... blocks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/Babble.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
           <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="111" column="12" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
-          <folding>
-            <marker date="1517667609000" expanded="true" signature="1092:2138" ph="SELECT * FRO... id" />
-            <marker date="1517667609000" expanded="true" signature="1107:1215" ph="SELECT b2.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="1247:1427" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="1459:1636" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="1647:1800" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="1852:2069" ph="select b.id babble" />
-            <marker date="1517667609000" expanded="true" signature="3281:5003" ph="SELECT * FRO... id" />
-            <marker date="1517667609000" expanded="true" signature="3319:3405" ph="SELECT b2.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3319:3406" ph="SELECT b2.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3461:3619" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3461:3620" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3675:3831" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3675:3832" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3889:4042" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="3889:4043" ph="SELECT b1.id... babble" />
-            <marker date="1517667609000" expanded="true" signature="4097:4345" ph="select b.id babble" />
-            <marker date="1517667609000" expanded="true" signature="4097:4346" ph="select b.id babble" />
-            <marker date="1517667609000" expanded="true" signature="4391:4657" ph="select b.id babble" />
-            <marker date="1517667609000" expanded="true" signature="4391:4658" ph="select b.id babble" />
-            <marker date="1517667609000" expanded="true" signature="4727:4953" ph="select b.id babble" />
-            <marker date="1517667609000" expanded="true" signature="4727:4954" ph="select b.id babble" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/BabbleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="62" column="52" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="62" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="149" column="50" lean-forward="false" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#test#0;class#BabbleStore#0" expanded="false" />
-            <element signature="method#addBabble#0;class#BabbleStore#0" expanded="false" />
-            <element signature="method#searchBabble#0;class#BabbleStore#0" expanded="false" />
-            <element signature="e#4852#4853#0" expanded="true" />
-            <element signature="e#4883#4884#0" expanded="true" />
-            <marker date="1517676921000" expanded="true" signature="3609:3705" ph="create view nocasebabble... " />
-            <marker date="1517676921000" expanded="true" signature="3637:3705" ph="select b.id,... babble" />
-            <marker date="1517676921000" expanded="true" signature="3815:3859" ph="SELECT * FRO... babble" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,6 +1040,225 @@
         <state relative-caret-position="119">
           <caret line="42" column="89" lean-forward="false" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/create_babble.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/HelloServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="59" column="5" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleUserStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="method#test#0;class#BabbleUserStore#0" expanded="false" />
+            <marker date="1517776677000" expanded="true" signature="2245:2293" ph="SELECT * FRO... babbleuser" />
+            <marker date="1517776677000" expanded="true" signature="2245:2294" ph="SELECT * FRO... babbleuser" />
+            <marker date="1517776677000" expanded="true" signature="2245:2296" ph="SELECT * FRO... babbleuser" />
+            <marker date="1517776677000" expanded="true" signature="3164:3243" ph="insert into babbleuser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BlockStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <folding>
+            <marker date="1517664849000" expanded="true" signature="981:1028" ph="SELECT * FRO... blocks" />
+            <marker date="1517664849000" expanded="true" signature="981:1081" ph="SELECT * FRO... blocks" />
+            <marker date="1517664849000" expanded="true" signature="1974:2066" ph="DELETE from dbp72.blocks... " />
+            <marker date="1517664849000" expanded="true" signature="2503:2571" ph="INSERT INTO dbp72.blocks... " />
+            <marker date="1517664849000" expanded="true" signature="3092:3118" ph="SELECT * FRO... blocks" />
+            <marker date="1517664849000" expanded="true" signature="3092:3119" ph="SELECT * FRO... blocks" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/FollowStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="79" column="21" lean-forward="false" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+          <folding>
+            <element signature="method#printFollowTable#0;class#FollowStore#0" expanded="false" />
+            <element signature="method#close#0;class#FollowStore#0" expanded="false" />
+            <marker date="1517502324000" expanded="true" signature="952:1012" ph="INSERT INTO dbp72.follows... " />
+            <marker date="1517502324000" expanded="true" signature="1522:1620" ph="SELECT * FRO... follows" />
+            <marker date="1517502324000" expanded="true" signature="2415:2460" ph="DELETE from dbp72.follows... " />
+            <marker date="1517502324000" expanded="true" signature="2415:2497" ph="DELETE from dbp72.follows... " />
+            <marker date="1517502324000" expanded="true" signature="2415:2510" ph="DELETE from dbp72.follows... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/TimelineStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <marker date="1517776677000" expanded="true" signature="1002:2048" ph="SELECT * FRO... id" />
+            <marker date="1517776677000" expanded="true" signature="1017:1125" ph="SELECT b2.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="1157:1337" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="1369:1546" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="1557:1710" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="1762:1979" ph="select b.id babble" />
+            <marker date="1517776677000" expanded="true" signature="3191:4913" ph="SELECT * FRO... id" />
+            <marker date="1517776677000" expanded="true" signature="3229:3315" ph="SELECT b2.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3229:3316" ph="SELECT b2.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3371:3529" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3371:3530" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3585:3741" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3585:3742" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3799:3952" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="3799:3953" ph="SELECT b1.id... babble" />
+            <marker date="1517776677000" expanded="true" signature="4007:4255" ph="select b.id babble" />
+            <marker date="1517776677000" expanded="true" signature="4007:4256" ph="select b.id babble" />
+            <marker date="1517776677000" expanded="true" signature="4301:4567" ph="select b.id babble" />
+            <marker date="1517776677000" expanded="true" signature="4301:4568" ph="select b.id babble" />
+            <marker date="1517776677000" expanded="true" signature="4637:4863" ph="select b.id babble" />
+            <marker date="1517776677000" expanded="true" signature="4637:4864" ph="select b.id babble" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/domain/LikesBabble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="43" column="71" lean-forward="false" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/LikeStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="190" column="9" lean-forward="false" selection-start-line="179" selection-start-column="8" selection-end-line="190" selection-end-column="9" />
+          <folding>
+            <marker date="1517778583000" expanded="true" signature="1091:1272" ph="SELECT likes... likesbabble" />
+            <marker date="1517778583000" expanded="true" signature="1091:1297" ph="SELECT likes... likesbabble" />
+            <marker date="1517778583000" expanded="true" signature="2312:2521" ph="SELECT likes... likesbabble" />
+            <marker date="1517778583000" expanded="true" signature="3544:3725" ph="SELECT likes... likesbabble" />
+            <marker date="1517778583000" expanded="true" signature="4695:4854" ph="SELECT likes... likesbabble" />
+            <marker date="1517778583000" expanded="true" signature="4695:4855" ph="SELECT likes... likesbabble" />
+            <marker date="1517778583000" expanded="true" signature="5795:5912" ph="update dbp72.likesbabble... " />
+            <marker date="1517778583000" expanded="true" signature="5802:5912" ph="delete from dbp72.likesbabble... " />
+            <marker date="1517778583000" expanded="true" signature="6486:6569" ph="delete from username" />
+            <marker date="1517778583000" expanded="true" signature="6486:6590" ph="delete from dbp72.likesbabble... " />
+            <marker date="1517778583000" expanded="true" signature="7211:7317" ph="INSERT INTO dbp72.likesbabble... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/BabbleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="62" column="52" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="62" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/RebabbleStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="125" column="9" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="125" selection-end-column="9" />
+          <folding>
+            <marker date="1517780955000" expanded="true" signature="993:1188" ph="SELECT b.id,... Rebabble" />
+            <marker date="1517780955000" expanded="true" signature="2296:2472" ph="SELECT b.id,... Rebabble" />
+            <marker date="1517780955000" expanded="true" signature="3571:3664" ph="INSERT INTO dbp72.rebabble... " />
+            <marker date="1517780955000" expanded="true" signature="3995:4090" ph="delete from dbp72.rebabble... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/profil_seite.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="136" column="7" lean-forward="false" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/stores/BabbleStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#test#0;class#BabbleStore#0" expanded="false" />
+            <element signature="method#searchBabble2#0;class#BabbleStore#0" expanded="false" />
+            <element signature="e#6059#6060#0" expanded="true" />
+            <element signature="e#6090#6091#0" expanded="true" />
+            <marker date="1517782194000" expanded="true" signature="1591:1655" ph="delete from dbp72.babble... " />
+            <marker date="1517782194000" expanded="true" signature="2200:2254" ph="INSERT INTO dbp72.babble... " />
+            <marker date="1517782194000" expanded="true" signature="2749:2788" ph="Select * fro... babble" />
+            <marker date="1517782194000" expanded="true" signature="3630:3674" ph="SELECT * FRO... babble" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/ProfileServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/detail_seite.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="133" column="27" lean-forward="false" selection-start-line="133" selection-start-column="27" selection-end-line="133" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unidue/inf/is/DetailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

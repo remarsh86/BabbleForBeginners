@@ -23,6 +23,7 @@ public class ProfileServlet extends HttpServlet {
     TimelineStore tstore;
     RebabbleStore rstore;
     LikeStore lstore;
+    BabbleStore bstore;
     private List<LikesBabble> likesList = new ArrayList<>();
     private List<Babble> rebabbledList = new ArrayList<>();
 
@@ -38,7 +39,7 @@ public class ProfileServlet extends HttpServlet {
         request.setAttribute("primaryuser", bs.getUsername());
 
         clickedUser = request.getParameter("clickedUser");
-        System.out.println("clicked user is: "+ clickedUser);
+        //System.out.println("clicked user is: "+ clickedUser);
 
         if(clickedUser !=null){ //create profile for clicked user
             BabbleUserStore store = new BabbleUserStore(clickedUser);
@@ -51,6 +52,16 @@ public class ProfileServlet extends HttpServlet {
 
             request = createTimeline(request, bs.getUsername(), bs);
         }
+
+        String clickedBabble = request.getParameter( "clickedBabble");
+        if(clickedBabble !=null){
+            int clickedId = Integer.parseInt(clickedBabble);
+            bstore = new BabbleStore();
+            Babble b = bstore.getBabble(clickedId);
+            session.setAttribute("babble", b);
+
+        }
+
         tstore.complete();
         tstore.close();
         rstore.complete();
@@ -71,6 +82,7 @@ public class ProfileServlet extends HttpServlet {
 
         String blockButton = request.getParameter("block");
         String followButton = request.getParameter("follow");
+
 
 
 

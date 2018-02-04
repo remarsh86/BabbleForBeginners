@@ -55,6 +55,20 @@ public class BabbleStore implements Closeable {
 
     }
 
+    public void deleteBabble(int id){
+        String sqlstring = "delete from dbp72.babble b  " +
+                " WHERE b.id = ?";
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement(sqlstring);
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public boolean addBabble(Babble babble) throws StoreException {
 
 
@@ -75,6 +89,29 @@ public class BabbleStore implements Closeable {
             throw new StoreException(e);
 
         }
+    }
+
+    public Babble getBabble(int clickedId){
+        Babble b = new Babble();
+        try{
+            PreparedStatement pst = connection.prepareStatement("Select * from dbp72.babble where id = ?");
+            pst.setInt(1, clickedId);
+            ResultSet rs = pst.executeQuery();
+            if(rs == null) System.out.println("No result set.");
+            else{
+                while (rs.next()){
+                    b = new Babble();
+                    b.setId(rs.getInt(1));
+                    b.setText(rs.getString(2));
+                    b.setCreated(rs.getTimestamp(3));
+                    b.setCreator(rs.getString(4));
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return b;
     }
 
     public List<Babble> searchBabble(String substring){
