@@ -84,7 +84,12 @@ public class ProfileServlet extends HttpServlet {
         String followButton = request.getParameter("follow");
 
 
-
+        //delete any babbles
+        Babble deleteBab = (Babble) session.getAttribute("babble");
+        if(deleteBab != null) {
+            bstore = new BabbleStore();
+            bstore.deleteBabble(deleteBab.getId());
+        }
 
         //if blockButton clicked
         if (null != blockButton  && !blockButton.isEmpty()) {

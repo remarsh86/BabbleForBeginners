@@ -38,18 +38,26 @@ public class DetailServlet extends HttpServlet {
         bs = (BabbleUser) session.getAttribute("babbler");
         request.setAttribute("primaryuser", bs);
 
-
-
-        //get Babble object from database and set attribute (ftl page) "babble" only when first directed to page
-     //   if(clickedBabble == null) {
+        if(request.getParameter("clickedBabble") != null){
             clickedBabble = request.getParameter("clickedBabble");
             int clickedId = Integer.parseInt(clickedBabble);
             BabbleStore bstore = new BabbleStore();
             b = bstore.getBabble(clickedId);
             bstore.complete();
             bstore.close();
-       // }
+        }
+
+        //get Babble object from database and set attribute (ftl page) "babble" only when first directed to page
+        if(clickedBabble == null ) {
+            clickedBabble = request.getParameter("clickedBabble");
+            int clickedId = Integer.parseInt(clickedBabble);
+            BabbleStore bstore = new BabbleStore();
+            b = bstore.getBabble(clickedId);
+            bstore.complete();
+            bstore.close();
+        }
         request.setAttribute("babble", b);
+        session.setAttribute("babble", b);
 
 
         //for showing buttons on ftl page
@@ -84,16 +92,10 @@ public class DetailServlet extends HttpServlet {
         String dislike = request.getParameter("dislike");
         String rebabble = request.getParameter("rebabble");
         String norebabble = request.getParameter("norebabble");
-        String delete = request.getParameter("delete");
+        //String delete = request.getParameter("delete");
+        //String gohome = request.getParameter("gohome");
 
-//        if(delete !=null && !delete.isEmpty()){
-//            System.out.println("delete babble");
-//            BabbleStore babbleStore = new BabbleStore();
-//            babbleStore.deleteBabble(b.getId());
-//            babbleStore.complete();
-//            babbleStore.close();
-//
-//        }
+
 
 
         if(norebabble!=null && !norebabble.isEmpty()){

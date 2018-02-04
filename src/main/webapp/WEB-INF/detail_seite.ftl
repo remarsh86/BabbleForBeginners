@@ -133,9 +133,17 @@
 
     <form action = "profile" method="post" >
          <#if primaryuser.username == babble.creator >
-             <input type ="submit" name ="delete" value="Delete Babble"/>
+             <input type ="submit"  value="Delete Babble"/>
          </#if>
     </form>
+
+    <form action = "profile" method="post" >
+
+        <input type ="submit"  value="Home"/>
+
+    </form>
+
+
 
 
 </body>
