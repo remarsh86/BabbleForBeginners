@@ -69,6 +69,8 @@ public class BabbleStore implements Closeable {
         }
     }
 
+
+
     public boolean addBabble(Babble babble) throws StoreException {
 
 
@@ -112,6 +114,44 @@ public class BabbleStore implements Closeable {
             e.printStackTrace();
         }
         return b;
+    }
+
+
+    public List<Babble> searchTopBabbles(){
+
+        List<Babble> list = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement(" SELECT b.id, b.text, b.created, b.creator" +
+                            " FROM " +
+                            " (SELECT lk.babble, count(*) AS cnt " +
+                            " FROM dbp72.likesbabble lk " +
+                            " WHERE lk.TYPE = 'like'" +
+                            " GROUP BY lk.babble" +
+                            " ORDER BY cnt DESC " +
+                            " FETCH FIRST 5 ROWS ONLY) AS ltbl JOIN dbp72.babble b ON b.id = ltbl.babble ");
+            //preparedStatement.setString(1, string2);
+
+            ResultSet rs = preparedStatement.executeQuery();
+            if(rs == null) System.out.println("No result set.");
+            else {
+                while (rs.next()) {
+                    System.out.println("result set not null");
+                    //System.out.println(rs.getInt(1) + " " + rs.getString(2) +" "+rs.getTimestamp(3)+" " +rs.getString(4));
+                    Babble b = new Babble();
+                    b.setId(rs.getInt(1));
+                    b.setText(rs.getString(2));
+                    b.setCreated(rs.getTimestamp(3));
+                    b.setCreator(rs.getString(4));
+                    list.add(b);
+                }
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
     public List<Babble> searchBabble(String substring){

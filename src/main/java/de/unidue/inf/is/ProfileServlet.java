@@ -47,15 +47,15 @@ public class ProfileServlet extends HttpServlet {
             BabbleUserStore store = new BabbleUserStore(clickedUser);
             BabbleUser user = store.getBabbleUser();
 
-            BlockStore blockStore = new BlockStore();
-            boolean blocked = blockStore.isBlockingClickedUser(bs.getUsername(), clickedUser);
-            if(blocked){
-                //request.setAttribute("blockedmessage", 1);
-                //create timeline for session user as usual
-                request = createTimeline(request, bs.getUsername(), bs);
-            }else {
+//            BlockStore blockStore = new BlockStore();
+//            boolean blocked = blockStore.isBlockingClickedUser(bs.getUsername(), clickedUser);
+//            if(blocked){
+//                //request.setAttribute("blockedmessage", 1);
+//                //create timeline for session user as usual
+//                request = createTimeline(request, bs.getUsername(), bs);
+//            }else {
                 request = createTimeline(request, clickedUser, user);
-            }
+          //  }
 
 
         }else{ //create profile for session user
