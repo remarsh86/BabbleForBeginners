@@ -73,9 +73,25 @@ input{
     <#--Clicks on the other buttons in Header are handled by the post method-->
     <form name = "clicks"   action = "profile" method="post"  >
           <input type="submit" name="block" value = "Block/Unblock" />
-            <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
+        <#--if clicked user is blocking session user, then don't show button-->
+        <#--<#if isBlocking = 1>-->
+             <#--&lt;#&ndash;don't show the follow button&ndash;&gt;-->
+        <#--<#else>-->
+            <#--<input type="submit" name="follow" value = "Follow/Unfollow" /><br/>-->
+        <#--</#if>-->
+        <input type="submit" name="follow" value = "Follow/Unfollow" /><br/>
+
+
             You are logged in as @${primaryuser} <br/>
     </form>
+
+    <#--<form name = "bm" method="get" >-->
+        <#--<#if blockedmessage = 1>-->
+            <#--You were blocked from the selected user-->
+        <#--</#if>-->
+    <#--</form>-->
+
+
     <#--The New Babble button is a link to the create babble page-->
     <form  action="createbabble" class = "boxed" >
         <input height="40px" type="submit"  value = "New Babble" /><br/>

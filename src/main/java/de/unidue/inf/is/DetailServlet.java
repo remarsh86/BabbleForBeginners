@@ -57,7 +57,7 @@ public class DetailServlet extends HttpServlet {
             bstore.close();
         }
         request.setAttribute("babble", b);
-        session.setAttribute("babble", b);
+
 
 
         //for showing buttons on ftl page
@@ -92,10 +92,13 @@ public class DetailServlet extends HttpServlet {
         String dislike = request.getParameter("dislike");
         String rebabble = request.getParameter("rebabble");
         String norebabble = request.getParameter("norebabble");
-        //String delete = request.getParameter("delete");
-        //String gohome = request.getParameter("gohome");
+        String delete = request.getParameter("delete");
+        String gohome = request.getParameter("gohome");
 
 
+        if(delete!=null && !delete.isEmpty()){
+            session.setAttribute("babble", b);
+        }
 
 
         if(norebabble!=null && !norebabble.isEmpty()){

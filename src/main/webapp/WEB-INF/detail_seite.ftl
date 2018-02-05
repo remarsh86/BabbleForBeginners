@@ -131,15 +131,15 @@
 
     </form>
 
-    <form action = "profile" method="post" >
+    <form action = "detail" method="post" >
          <#if primaryuser.username == babble.creator >
-             <input type ="submit"  value="Delete Babble"/>
+             <input type ="submit" name = "delete"  value="Delete Babble"/>
          </#if>
     </form>
 
     <form action = "profile" method="post" >
 
-        <input type ="submit"  value="Home"/>
+        <input type ="submit" name = "gohome"  value="Home"/>
 
     </form>
 

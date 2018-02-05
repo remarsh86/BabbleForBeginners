@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class BlockStore implements Closeable{
     private Connection connection;
     private boolean complete;
+    private int isBlocking=0;
 
     public BlockStore() throws StoreException{
         try {
@@ -24,6 +25,14 @@ public class BlockStore implements Closeable{
         catch (SQLException e) {
             throw new StoreException(e);
         }
+    }
+
+    public void setIsBlockingInt(int i){
+        this.isBlocking = i;
+    }
+
+    public int getIsBlockingInt(){
+        return this.isBlocking;
     }
 
     public boolean isBlockingClickedUser(String sessionUser, String clickedUser){

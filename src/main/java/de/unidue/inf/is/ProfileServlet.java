@@ -41,11 +41,21 @@ public class ProfileServlet extends HttpServlet {
         clickedUser = request.getParameter("clickedUser");
         //System.out.println("clicked user is: "+ clickedUser);
 
+        request.setAttribute("blockedmessage", 0);
+
         if(clickedUser !=null){ //create profile for clicked user
             BabbleUserStore store = new BabbleUserStore(clickedUser);
             BabbleUser user = store.getBabbleUser();
 
-            request = createTimeline(request, clickedUser, user);
+            BlockStore blockStore = new BlockStore();
+            boolean blocked = blockStore.isBlockingClickedUser(bs.getUsername(), clickedUser);
+            if(blocked){
+                //request.setAttribute("blockedmessage", 1);
+                //create timeline for session user as usual
+                request = createTimeline(request, bs.getUsername(), bs);
+            }else {
+                request = createTimeline(request, clickedUser, user);
+            }
 
 
         }else{ //create profile for session user
@@ -82,13 +92,17 @@ public class ProfileServlet extends HttpServlet {
 
         String blockButton = request.getParameter("block");
         String followButton = request.getParameter("follow");
-
+        //request.setAttribute("isBlocking", 0);
 
         //delete any babbles
-        Babble deleteBab = (Babble) session.getAttribute("babble");
-        if(deleteBab != null) {
+        if(session.getAttribute("babble")!= null) {
+            Babble deleteBab = (Babble) session.getAttribute("babble");
+            System.out.println("babble id is: " + deleteBab.getId());
             bstore = new BabbleStore();
             bstore.deleteBabble(deleteBab.getId());
+            bstore.complete();
+            bstore.close();
+
         }
 
         //if blockButton clicked
@@ -103,6 +117,7 @@ public class ProfileServlet extends HttpServlet {
                 if (blockStore.isBlockingClickedUser(bs.getUsername(), clickedUser)){
                     //then unblock
                     blockStore.deleteBlock(bs.getUsername(), clickedUser);
+                    //request.setAttribute("isBlocking", 1);
 
                 }else{
                     //Add block
@@ -122,10 +137,6 @@ public class ProfileServlet extends HttpServlet {
         }
         //if followButton clicked
         if (null != followButton  && !followButton.isEmpty()) {
-            //System.out.println("What is clickedUser " + clickedUser);
-            //do you follow clickedUser?? if yes -> unfollow. If no -> follow
-
-            //System.out.println("You clicked the follow Button");
 
             //if another user has been clicked (clickedUser parameter) and the clicked user is not oneself,
             //then session's babbleuser object can follow the clickeduser

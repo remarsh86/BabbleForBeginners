@@ -49,9 +49,8 @@
     <#--<tr><td>${babble.creator}</td>-->
         <div style=" color: cornflowerblue" > <br/>
 
-            <a href="profile?clickedUser=${babble.creator}"><h3>Student@${babble.creator}</h3> </a>
-            <#--<h3>Student@${babble.creator}</h3>-->
-            <p>${babble.text} <br/> ${babble.created}</p>
+        <p> <a href="detail?clickedBabble=${babble.id}"> ${babble.text}</a> <br/> ${babble.created}</p>
+
 
 
         </div>
