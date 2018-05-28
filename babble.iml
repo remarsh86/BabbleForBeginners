@@ -26,7 +26,7 @@
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.0.6.v20130930" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.0.6.v20130930" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:9.0.6.v20130930" level="project" />
-    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
     <orderEntry type="library" name="Maven: com.ibm.db2:jdbc:1.0" level="project" />
     <orderEntry type="library" name="Maven: commons-net:commons-net:3.1" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
